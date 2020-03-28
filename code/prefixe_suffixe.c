@@ -13,7 +13,7 @@
 
 #include "prefixe_suffixe.h"
 
-prefixe_suffixe(int *t, int N){
+int prefixe_suffixe(int *t, int N){
 	assert(t != NULL && N > 0);
 
 	int i = 0, j = 1, ctr = 0;

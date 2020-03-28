@@ -21,7 +21,7 @@ OBJECTS=main.o prefixe_suffixe.o
 
 all: $(EXEC)
 
-pnm: $(OBJECTS)
+prefixe_suffixe: $(OBJECTS)
 	$(LD) -o $(EXEC) $(OBJECTS) $(LDFLAGS)
 
 main.o: main.c

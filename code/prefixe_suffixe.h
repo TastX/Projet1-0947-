@@ -8,3 +8,5 @@
  * @date: 28/03/20
  * @projet: INFO0947 Projet 1
  */
+
+int prefixe_suffixe(int *t, int N);
