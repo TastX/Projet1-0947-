@@ -1,22 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <assert.h>
 
-int main(){
-	const int N = 10;
-	int a = 0, b = 1, c = N-2, d = N-1, ctr = 0;
-	int t[10] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
-	while(b < N){
-		if(t[a] == t[b] /*&& t[N-1-b] == t[N-1-a]*/){
+prefixe_suffixe(int *t, int N){
+	assert(t != NULL && N > 0);
+
+	int i = 0, j = 1, ctr = 0;
+
+	while(j < N){
+
+		if(t[i] == t[j] && t[N-1-j] == t[N-1-i]){
 			ctr++;
-			a++;
-			b++;
+			i++;
 		}
+
 		else{
-			a = 0;
-			b -= (ctr - 1);
 			ctr = 0;
 		}
-		//b++;
+
+		j++;
 	}
-	printf("%d\n", ctr);
+	return ctr;
 }
